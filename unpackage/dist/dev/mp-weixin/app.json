@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pageA",
+      "pages": [
+        "search/search",
+        "set/set",
+        "about/about",
+        "details/details",
+        "atlas/atlas",
+        "photo/photo",
+        "author/author",
+        "me/me",
+        "history/history",
+        "create/create"
+      ]
+    },
+    {
+      "root": "pageB",
+      "pages": [
+        "wallpaper/wallpaper",
+        "activity/activity"
+      ]
+    }
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "图鸟UI",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "preloadRule": {
+    "pages/index/index": {
+      "packages": [
+        "pageA",
+        "pageB"
+      ],
+      "network": "all"
+    }
+  },
+  "requiredPrivateInfos": [
+    "chooseAddress"
+  ],
+  "usingComponents": {}
+}

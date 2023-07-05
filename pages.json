@@ -1,0 +1,111 @@
+{
+  "easycom": {
+    "^tn-(.*)": "@/tuniao-ui/components/tn-$1/tn-$1.vue"
+  },
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "图鸟壁纸"
+			}
+		}
+	],
+  "subPackages": [
+    {
+      "root": "pageA",
+      "pages": [
+        {
+          "path": "search/search",
+          "style": {
+          	"navigationBarTitleText": "搜索"
+          }
+        },
+        {
+          "path": "set/set",
+          "style": {
+          	"navigationBarTitleText": "设置"
+          }
+        },
+        {
+          "path": "about/about",
+          "style": {
+          	"navigationBarTitleText": "关于图鸟"
+          }
+        },
+        {
+          "path": "details/details",
+          "style": {
+          	"navigationBarTitleText": "详情"
+          }
+        },
+        {
+          "path": "atlas/atlas",
+          "style": {
+          	"navigationBarTitleText": "套图"
+          }
+        },
+        {
+          "path": "photo/photo",
+          "style": {
+          	"navigationBarTitleText": "单图"
+          }
+        },
+        {
+          "path": "author/author",
+          "style": {
+          	"navigationBarTitleText": "作者"
+          }
+        },
+        {
+          "path": "me/me",
+          "style": {
+          	"navigationBarTitleText": "我的发布"
+          }
+        },
+        {
+          "path": "history/history",
+          "style": {
+          	"navigationBarTitleText": "发布记录"
+          }
+        },
+        {
+          "path": "create/create",
+          "style": {
+          	"navigationBarTitleText": "创作"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pageB",
+      "pages": [
+        {
+          "path": "wallpaper/wallpaper",
+          "style": {
+          	"navigationBarTitleText": "壁纸"
+          }
+        },
+        {
+          "path": "activity/activity",
+          "style": {
+          	"navigationBarTitleText": "Ai广场"
+          }
+        }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "packages": ["pageA", "pageB"],
+      "network": "all"
+    }
+  },
+	"globalStyle": {
+    "navigationStyle": "custom",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "图鸟UI",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
